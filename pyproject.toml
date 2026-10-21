@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aria2-dns-doctor"
+version = "0.1.0"
+description = "Diagnose and fix aria2/Motrix torrents stuck at 0 peers caused by async DNS (c-ares) hanging on bogus DNS servers"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Tommy (imttj)"}]
+requires-python = ">=3.8"
+keywords = ["aria2", "motrix", "bittorrent", "dns", "cli"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent", "Environment :: Console"]
+
+[project.urls]
+Homepage = "https://github.com/imttj/aria2-dns-doctor"
+
+[project.scripts]
+aria2-dns-doctor = "aria2_dns_doctor.cli:main"
+
+[tool.setuptools]
+packages = ["aria2_dns_doctor"]
